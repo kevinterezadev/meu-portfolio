@@ -1,0 +1,131 @@
+.hero {
+    background: var(--hero-mobile-background);
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1.25rem;
+    color: var(--white-color);
+    font-family: var(--primary-font);
+    min-height: 90vh;
+    padding: 2rem 0;
+}
+
+.hero__title {
+    font-size: 3.5em;
+    line-height: 1;
+}
+
+.hero__lastname {
+    display: block;
+}
+
+.hero__subtitle {
+    font-family: var(--secondary-font);
+    font-weight: normal;
+    font-size: 1em;
+    margin: 1.25rem 0;
+}
+
+.hero__btn {
+    background-color: var(--white-color);
+    padding: 0.5rem;
+    color: var(--dark-color);
+    font-size: 1.25em; 
+    display: inline-block;
+    border-radius: 0.938rem;
+    border: 1px solid var(--white-color);
+    transition: 0.3s ease-in;
+}
+
+.hero__btn::after {
+    margin-left: 0.5em;
+    content: url("../../images/partials/hero/arrow-right.svg");
+    vertical-align: text-bottom;
+    display: inline-block;
+    transition: 0.3s ease-in;
+}
+
+.hero__btn:hover {
+    background: transparent;
+    color: var(--white-color);
+    transform: scale(1.05)
+}
+
+.hero__btn:hover::after {
+    transform: translateX(0.25em);
+    content: url("../../images/partials/hero/arrow-right--light.svg");
+}
+
+.hero__img {
+    width: clamp(11.25rem, 80vw, 17rem);
+}
+
+.hero__chevron {
+    width: 2.188em;
+    margin-top: 1.25rem;
+    animation: bounce 2.5s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(1.563rem); } 
+}
+
+@media (min-width: 40rem) {
+
+    .hero-content {
+        min-height: 85vh;
+        padding: 0;
+    }
+    .hero__title {
+        font-size: clamp(3.5em, 6vw, 5em);
+    }
+
+    .hero__subtitle {
+        font-size: clamp(1em, 3vw, 1.5em);
+    }
+
+    .hero__img {
+        width: clamp(17rem, 50vw, 27rem);
+    }
+
+    .hero__chevron {
+        width: 3.125rem;
+    }
+}
+
+@media (min-width: 80rem) {
+
+    .hero {
+        position: relative;
+        background: var(--hero-desktop-background);
+    }
+    .hero-content {
+        flex-direction: row;
+        justify-content: space-between;
+        min-height: 85vh;
+        text-align: left;
+        position: static;
+    }
+
+    .hero__lastname {
+        display: inline;
+    }
+
+    .hero__chevron {
+        position: absolute;
+        bottom: 4rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    @keyframes bounce {
+        0%, 100% { transform: translate(-50%, 0); }
+        50% { transform: translate(-50%, 1.563rem); } 
+    }
+}
