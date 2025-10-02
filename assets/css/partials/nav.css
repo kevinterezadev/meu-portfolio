@@ -1,0 +1,131 @@
+.nav {
+    background-color: var(--navbar-background);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-around;
+    height: 6.25rem;
+    font-family: "Playfair Display", sans-serif;
+    align-items: center;
+}
+
+.nav__logo {
+    font-size: 3rem;
+    font-weight: bold;
+    z-index: 1;
+    color: var(--white-color);
+    letter-spacing: -7px;
+}
+
+.nav__list {
+    position: fixed;
+    top: 6.25rem;
+    right: 0;
+    width: 100vw;
+    height: 50vh;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--navbar-background);
+    clip-path: circle(100px at 90% -50%);
+    transition: 0.7s ease-in-out;
+    pointer-events: none;
+    border-top: 1px solid var(--white-color);
+}
+
+.nav.active .nav__list {
+    clip-path: circle(1500px at 10% -50%);
+    pointer-events: all;
+}
+
+.nav__link {
+    font-size: clamp(1em, 5vw, 1.5em);
+    padding: 1em;
+    transition: 0.3s;
+    color: var(--white-color);
+}
+
+.nav__link:hover {
+    letter-spacing: 3px;
+    text-shadow: 0 0 5px var(--white-color);
+}
+
+.nav__hamburguer {
+    border: none;
+    background: none;
+    cursor: pointer;
+    z-index: 1;
+    padding-block: 1.5rem;
+}
+
+.nav__hamburguer-line {
+    content: " ";
+    display: block;
+    width: 2.5rem;
+    height: 0.313rem;
+    background: var(--white-color);
+    margin-top: 0.438rem;
+    border-radius: 0.625rem;
+    transition: 0.3s;
+}
+
+.nav.active .nav__hamburguer-line:nth-of-type(1) {
+  transform: translateY(0.75rem) rotate(45deg);
+}
+
+.nav.active .nav__hamburguer-line:nth-of-type(2) {
+  opacity: 0; /* some */
+}
+
+.nav.active .nav__hamburguer-line:nth-of-type(3) {
+  transform: translateY(-0.75rem) rotate(-45deg);
+}
+
+@media (min-width: 40rem) {
+    .nav-content {
+        justify-content: space-between;
+        padding-inline: 2rem;
+    }
+
+    .nav__logo {
+        font-size: 2em;
+        letter-spacing: normal;
+    }
+
+    .nav__list {
+        display: flex;
+        flex-direction: row;
+        gap: 1.25rem;
+        align-items: stretch;
+        justify-content: flex-start;
+        position: static;
+        width: auto;
+        height: auto;
+        background: none;
+        clip-path: none;
+        border: none;
+        transition: none;
+        pointer-events: all;
+    }
+
+    .nav__link {
+        font-size: 1.125em;
+        padding: 0;
+    }
+
+    .nav__hamburguer {
+        display: none;
+    }
+}
+
+@media (min-width: 80rem) {
+    .nav-content {
+        padding: 0;
+    }
+}
