@@ -7,9 +7,26 @@
     --white-color: #F8F4F6;
     --purple-color: #4B367C;
     --dark-color: #1A1A1A;
+    --gray-color: #C0C0C0;
 
     /* Cores de fundos */
     --navbar-background: #121212;
-    --hero-mobile-background: linear-gradient(to bottom, #1A1A1A 30%, #291E42 70%);
-    --hero-desktop-background: linear-gradient(to right, #1A1A1A, #291E42);
+    --hero-background: linear-gradient(to bottom, #1A1A1A 30%, #291E42 70%);
+    --dark-gray-background: #242424;
+
+    /* Espaçamentos padrão */
+    --section-padding: 3.125rem 0;
+    --title-padding: 1.875rem;
+
+    /* Tamanho de fontes */
+    --section-title-size: 2.5em;
+
+    /* Arredondamento de cantos */
+    --default-radius: 0.625rem;
+}
+
+@media (min-width: 80rem) {
+    :root {
+        --hero-background: linear-gradient(to right, #1A1A1A, #291E42);
+    }
 }
