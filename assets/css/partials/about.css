@@ -31,8 +31,12 @@
     border-radius: var(--default-radius);
 }
 
-.about__content {
+.about__info {
     text-align: left;
+}
+
+.about__label {
+    color: var(--purple-color);
 }
 
 .about__subtitle {
