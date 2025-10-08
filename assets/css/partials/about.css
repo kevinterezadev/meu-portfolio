@@ -65,7 +65,7 @@
 .about__icon {
     background-color: var(--dark-gray-background);
     border: 2px solid var(--purple-color);
-    padding: 1rem;
+    padding: clamp(0.675em, 2vh, 1em);
     border-radius: var(--default-radius);
     transition: 0.3s;
 }
@@ -99,6 +99,10 @@
 
     .about__text {
         font-size: clamp(0.625em, 1.6vw, 1em);
+    }
+
+    .about__icon {
+        padding: clamp(0.625em, 1.6vw, 1em);
     }
 }
 
