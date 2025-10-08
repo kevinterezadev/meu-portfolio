@@ -11,8 +11,8 @@
     gap: 1.25rem;
     color: var(--white-color);
     font-family: var(--primary-font);
-    min-height: 90vh;
-    padding: 2rem 0;
+    min-height: 85vh;
+    padding: 5vh 0;
 }
 
 .hero__title {
@@ -74,14 +74,13 @@
 
 @keyframes bounce {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(1.563rem); } 
+  50% { transform: translateY(4vh); } 
 }
 
 @media (min-width: 40rem) {
 
     .hero-content {
-        min-height: 85vh;
-        padding: 0;
+        min-height: 50vh;
     }
     .hero__title {
         font-size: clamp(3.5em, 6vw, 5em);
@@ -92,7 +91,7 @@
     }
 
     .hero__img {
-        width: clamp(17rem, 50vw, 27rem);
+        width: clamp(17rem, 40vw, 27rem);
     }
 
     .hero__chevron {
