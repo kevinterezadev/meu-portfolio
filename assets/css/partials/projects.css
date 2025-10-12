@@ -1,171 +1,205 @@
+/* ==============================
+   Projects Section (Mobile First)
+   ============================== */
 .projects {
-    background-color: var(--dark-background);
+  background-color: var(--dark-background);
 }
 
 .projects-content {
-    padding: var(--section-padding);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  max-width: 80%;
+  padding: var(--section-padding);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
+/* ---------- Título ---------- */
 .projects__title {
-    color: var(--white-color);
-    font-family: var(--primary-font);
-    font-size: var(--section-title-size);
-    margin-bottom: var(--title-padding);
+  margin-bottom: var(--title-padding);
+
+  color: var(--white-color);
+  font-size: var(--section-title-size);
+  font-family: var(--primary-font);
 }
 
+/* ---------- Container de Projetos ---------- */
 .projects__container {
-    display: flex;
-    flex-direction: column;
-    gap: 3.125rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.125rem;
 }
 
+/* ---------- Item Individual ---------- */
 .projects__item {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-    color: var(--white-color);
-    text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  color: var(--white-color);
+  text-align: left;
 }
 
+/* ---------- Imagem ---------- */
 .projects__img {
-    max-width: 100%;
-    border-radius: var(--default-radius);
-    aspect-ratio: 3 / 2;
-    object-fit: cover;
-    
+  max-width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: var(--default-radius);
 }
 
+/* ---------- Nome e Descrição ---------- */
 .projects__name {
-    font-size: 2em; 
-    font-family: var(--primary-font);
+  font-size: 2em;
+  font-family: var(--primary-font);
 }
 
 .projects__description {
-    margin: 0.625rem 0;
-    line-height: 1.5;
-    font-size: clamp(0.813em, 4vw, 1em);
+  margin: 0.625rem 0;
+  line-height: 1.5;
+  font-size: clamp(0.813em, 4vw, 1em);
 }
 
+/* ---------- Tecnologias ---------- */
 .projects__tech {
-    margin-right: 0.313rem;
-    padding: 0.313em;
-    border-radius: 0.313rem;
-    font-size: clamp(0.75em, 2vw, 0.75em); 
-    display: inline-block;
+  display: inline-block;
+  margin-right: 0.313rem;
+  padding: 0.313em;
+
+  border-radius: 0.313rem;
+  font-size: clamp(0.75em, 1.5vw, 0.75em);
 }
 
+/* ---------- Cores das Tecnologias ---------- */
 .projects__tech--html {
-    color: #E34F26;
-    border: 1px solid #E34F26;
+  color: #e34f26;
+  border: 1px solid #e34f26;
 }
 
 .projects__tech--css {
-    color: #1572B6;
-    border: 1px solid #1572B6;
-}
-.projects__tech--js {
-    color: #F7DF1E;
-    border: 1px solid #F7DF1E;
+  color: #1572b6;
+  border: 1px solid #1572b6;
 }
 
+.projects__tech--js {
+  color: #f7df1e;
+  border: 1px solid #f7df1e;
+}
+
+/* ---------- Botões / Links ---------- */
 .projects__links {
-    display: flex;
-    justify-content: center;
-    gap: 0.625rem;
-    margin-top: 1.25rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.625rem;
+  margin-top: 1.25rem;
 }
 
 .projects__btn {
-    padding: 0.625em 0.75em;
-    border: 1px solid var(--white-color);
-    border-radius: 1.25rem;
-    font-weight: bold;
-    transition: 0.3s ease-in;
-    font-size: clamp(0.875em, 3vw, 1em);
-    width: fit-content;
+  width: fit-content;
+  padding: 0.625em 0.75em;
+
+  border: 1px solid var(--white-color);
+  border-radius: 1.25rem;
+  font-weight: bold;
+  font-size: clamp(0.875em, 3vw, 1em);
+
+  transition: 0.3s ease-in;
 }
 
 .projects__btn:hover {
-    transform: scale(1.10);
-    box-shadow: 0 0 5px var(--white-color);
+  transform: scale(1.1);
+  box-shadow: 0 0 5px var(--white-color);
 }
 
+/* ---------- Botão Deploy ---------- */
 .projects__btn--deploy {
-    color: var(--white-color);
+  color: var(--white-color);
 }
 
 .projects__btn--deploy::before {
-    content: url("../../images/partials/projects/link-icon.svg");
-    width: 1.125em;
-    margin-right: 0.313rem;
-    vertical-align: middle;
+  content: url("../../images/partials/projects/link-icon.svg");
+  width: 1.125em;
+  margin-right: 0.313rem;
+  vertical-align: middle;
 }
 
+/* ---------- Botão Repositório ---------- */
 .projects__btn--repository {
-    color: var(--dark-color);
-    background: var(--white-color);
+  color: var(--dark-color);
+  background: var(--white-color);
 }
 
 .projects__btn--repository::before {
-    content: url("../../images/partials/projects/./github-icon--black.svg");
-    width: 1.125em;
-    margin-right: 0.313rem;
-    vertical-align: middle;
+  content: url("../../images/partials/projects/github-icon--black.svg");
+  width: 1.125em;
+  margin-right: 0.313rem;
+  vertical-align: middle;
 }
 
+/* ---------- Chamada para Ver Mais ---------- */
 .projects__cta {
-    margin-top: 1.875rem;
-    font-size: clamp(1.125em, 3vw, 1.5em);
-    font-weight: 400;
-    font-family: var(--primary-font);
-    color: var(--gray-color);
-    text-decoration: underline;
-    transition: 0.3s;
+  margin-top: 1.875rem;
+  color: var(--gray-color);
+  font-family: var(--primary-font);
+  font-weight: 400;
+  font-size: clamp(1.125em, 3vw, 1.5em);
+
+  text-decoration: underline;
+  transition: 0.3s;
 }
 
 .projects__cta:hover {
-    color: var(--white-color);
+  color: var(--white-color);
 }
+
+/* ==============================
+   Responsividade
+   ============================== */
+
+/* Tablets / iPads */
 @media (min-width: 40rem) {
+  .projects__item {
+    flex-direction: row;
+  }
 
-    .projects__item {
-        flex-direction: row;
-    }
+  .projects__item:nth-of-type(even) {
+    flex-direction: row-reverse;
+  }
 
-    .projects__item:nth-of-type(even) {
-        flex-direction: row-reverse;
-    }
+  .projects__img {
+    max-width: 45%;
+    aspect-ratio: 16 / 9;
+  }
 
-    .projects__img {
-        max-width: 50%;
-        aspect-ratio: 16 / 9;
-    }
+  .projects__description {
+    font-size: clamp(0.625em, 1.6vw, 1em);
+  }
 
-    .projects__description {
-        font-size: clamp(0.625em, 1.6vw, 1em);
-    }
+  .projects__links {
+    justify-content: left;
+  }
 
-    .projects__links {
-        justify-content: left;
-    }
+  .projects__btn {
+    font-size: clamp(0.875em, 1vw, 1em);
+  }
 
-    .projects__btn {
-        font-size: clamp(0.875em, 2vw, 1em);
-    }
-
-    .projects__cta {
-        font-size: clamp(1.5em, 4vw, 1.75em);
-    }
+  .projects__cta {
+    font-size: clamp(1.5em, 2.5vw, 1.75em);
+  }
 }
 
-@media (min-width: 80rem) {
+/* Laptops Médios */
+@media (min-width: 64rem) {
+  .projects__img {
+    max-width: 50%;
+  }
+}
 
-    .projects__container {
-        max-width: 70%;
-    }
+/* Desktops */
+@media (min-width: 81rem) {
+  .projects__container {
+    max-width: 80%;
+  }
 }

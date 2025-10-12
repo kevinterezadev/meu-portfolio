@@ -1,122 +1,147 @@
+/* ==============================
+   About Section (Mobile First)
+   ============================== */
 .about {
-    background-color: var(--dark-gray-background);
+  background-color: var(--dark-gray-background);
 }
 
 .about-content {
-    padding: var(--section-padding);
-    text-align: center;
-    color: var(--white-color);
-    font-family: var(--primary-font);
+  padding: var(--section-padding);
+  text-align: center;
+
+  color: var(--white-color);
+  font-family: var(--primary-font);
 }
 
+/* ---------- Título ---------- */
 .about__title {
-    font-size: var(--section-title-size);
-    padding-bottom: var(--title-padding);
+  font-size: var(--section-title-size);
+  padding-bottom: var(--title-padding);
 }
 
+/* ---------- Card Principal ---------- */
 .about__card {
-    background-color: var(--dark-color);
-    padding: 1rem;
-    border-radius: var(--default-radius);
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+
+  padding: 1rem;
+  background-color: var(--dark-color);
+  border-radius: var(--default-radius);
 }
 
+/* ---------- Imagem ---------- */
 .about__img {
-    width: 100%;
-    object-fit: cover;
-    aspect-ratio: 1 / 1;
-    border-radius: var(--default-radius);
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--default-radius);
 }
 
+/* ---------- Informações ---------- */
 .about__info {
-    text-align: left;
+  text-align: left;
 }
 
 .about__label {
-    color: var(--purple-color);
+  color: var(--purple-color);
 }
 
 .about__subtitle {
-    font-size: 2.25em;
+  font-size: 2.25em;
 }
 
 .about__text {
-    margin: 0.625rem 0;
-    font-family: var(--secondary-font);
-    color: var(--gray-color);
-    line-height: 1.5;
-    font-size: clamp(0.813em, 4vw, 1em);
+  margin: 0.625rem 0;
+  font-size: clamp(0.813em, 4vw, 1em);
+  font-family: var(--secondary-font);
+  line-height: 1.5;
+  color: var(--gray-color);
 }
 
 .about__text--bold {
-    color: var(--white-color);
-    font-weight: 600;
+  color: var(--white-color);
+  font-weight: 600;
 }
 
+/* ---------- Links / Ícones ---------- */
 .about__links {
-    display: flex;
-    gap: 1.25rem;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
 }
 
 .about__icon {
-    background-color: var(--dark-gray-background);
-    border: 2px solid var(--purple-color);
-    padding: clamp(0.675em, 2vh, 1em);
-    border-radius: var(--default-radius);
-    transition: 0.3s;
+  margin-top: 0.625rem;
+  padding: clamp(0.675em, 3vw, 1em);
+  background-color: var(--dark-gray-background);
+  border: 2px solid var(--purple-color);
+  border-radius: var(--default-radius);
+
+  transition: 0.3s;
 }
 
 .about__icon:hover {
-    transform: scale(1.2);
-    box-shadow: 0 0 10px var(--purple-color);
+  transform: scale(1.2);
+  box-shadow: 0 0 10px var(--purple-color);
 }
 
+/* ==============================
+   Responsividade
+   ============================== */
+
+/* Tablets / iPads */
 @media (min-width: 40rem) {
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .about-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .about__card {
-        max-width: 90%;
-        flex-direction: row;
-        align-items: center;
-    }
+  .about__card {
+    max-width: 90%;
+    flex-direction: row;
+    align-items: center;
+  }
 
-    .about__img {
-        max-width: 50%;
-    }
+  .about__img {
+    max-width: 50%;
+  }
 
-    .about__subtitle {
-        font-size: clamp(1.5em, 3vw, 2.25em);
-    }
+  .about__label {
+    font-size: 0.875em;
+  }
 
-    .about__text {
-        font-size: clamp(0.625em, 1.6vw, 1em);
-    }
+  .about__subtitle {
+    font-size: clamp(1.5em, 3vw, 2.25em);
+  }
 
-    .about__icon {
-        padding: clamp(0.625em, 1.6vw, 1em);
-    }
+  .about__text {
+    font-size: clamp(0.625em, 1.6vw, 1em);
+  }
+
+  .about__icon {
+    padding: clamp(0.625em, 1.6vw, 1em);
+  }
 }
 
-@media (min-width: 80rem) {
+/* Desktops */
+@media (min-width: 81rem) {
+  .about__card {
+    max-width: 70%;
+  }
 
-    .about__card {
-        max-width: 80%;
-    }
+  .about__label {
+    font-size: 1em;
+  }
 
-    .about__text {
-        margin: 1.25rem 0;
-    }
+  .about__text {
+    margin: 1.25rem 0;
+  }
 
-    .about__icon {
-        margin-top: 0.625rem;
-    }
+  .about__icon {
+    padding: 1em;
+  }
 }

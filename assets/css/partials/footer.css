@@ -1,9 +1,14 @@
+/* ==============================
+   Footer Section (Mobile First)
+   ============================== */
 .footer {
-    background-color: var(--footer-background);
+  background-color: var(--footer-background);
 }
 
+/* ---------- Conteúdo do Rodapé ---------- */
 .footer-content {
-    text-align: center;
-    padding: 3.125rem;
-    color: var(--white-color);
+  padding: 3.125rem;
+  text-align: center;
+
+  color: var(--white-color);
 }

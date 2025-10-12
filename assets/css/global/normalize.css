@@ -1,29 +1,43 @@
+/* ==============================
+   Normalize / Reset de Estilos
+   ============================== */
+
+/* ---------- Reset Global ---------- */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* ---------- Comportamento do Scroll ---------- */
 html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 5rem;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
+/* ---------- Fonte Global ---------- */
 body {
-    font-family: "Work Sans", sans-serif;
+  font-family: "Work Sans", sans-serif;
 }
 
+/* ---------- Links ---------- */
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
+/* ---------- Container de Conteúdo ---------- */
 .content {
-    max-width: calc(90vw);
-    margin: 0 auto;
+  max-width: 90vw;
+  margin: 0 auto;
 }
 
-@media (min-width: 73rem) {
-    .content {
-        max-width: 73rem;
-    }
+/* ==============================
+   Responsividade
+   ============================== */
+
+/* Desktops grandes */
+@media (min-width: 81rem) {
+  .content {
+    max-width: 80rem;
+  }
 }

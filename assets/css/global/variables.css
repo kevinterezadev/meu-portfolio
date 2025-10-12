@@ -1,35 +1,44 @@
+/* ==============================
+   Variáveis Globais
+   ============================== */
+
 :root {
-    /* Fontes */
-    --primary-font: "Playfair Display", serif;
-    --secondary-font: "Work Sans", sans-serif;
-    
-    /* Cores de texto */
-    --white-color: #F8F4F6;
-    --purple-color: #4B367C;
-    --dark-color: #1A1A1A;
-    --gray-color: #C0C0C0;
+  /* ---------- Fontes ---------- */
+  --primary-font: "Playfair Display", serif;
+  --secondary-font: "Work Sans", sans-serif;
 
-    /* Cores de fundos */
-    --navbar-background: #121212;
-    --hero-background: linear-gradient(to bottom, #1A1A1A 30%, #291E42 70%);
-    --dark-gray-background: #242424;
-    --dark-background: #1A1A1A;
-    --contact-background: linear-gradient(to bottom, #242424 60%, #291E42 100%);
-    --footer-background: #291E42;
+  /* ---------- Cores de Texto ---------- */
+  --white-color: #f8f4f6;
+  --purple-color: #4b367c;
+  --dark-color: #1a1a1a;
+  --gray-color: #c0c0c0;
 
-    /* Espaçamentos padrão */
-    --section-padding: 3.125rem 0;
-    --title-padding: 1.875rem;
+  /* ---------- Cores de Fundo ---------- */
+  --navbar-background: #121212;
+  --hero-background: linear-gradient(to bottom, #1a1a1a 30%, #291e42 70%);
+  --dark-gray-background: #242424;
+  --dark-background: #1a1a1a;
+  --contact-background: linear-gradient(to bottom, #242424 60%, #291e42 100%);
+  --footer-background: #291e42;
 
-    /* Tamanho de fontes */
-    --section-title-size: 2.5em;
+  /* ---------- Espaçamentos ---------- */
+  --section-padding: 3.125rem 0;
+  --title-padding: 1.875rem;
 
-    /* Arredondamento de cantos */
-    --default-radius: 0.625rem;
+  /* ---------- Tamanhos ---------- */
+  --section-title-size: 2.5em;
+
+  /* ---------- Bordas ---------- */
+  --default-radius: 0.625rem;
 }
 
-@media (min-width: 80rem) {
-    :root {
-        --hero-background: linear-gradient(to right, #1A1A1A, #291E42);
-    }
+/* ==============================
+   Responsividade
+   ============================== */
+
+/* Fundo alternativo para telas médias e grandes */
+@media (min-width: 40rem) {
+  :root {
+    --hero-background: linear-gradient(to right, #1a1a1a, #291e42);
+  }
 }
